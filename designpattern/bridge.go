@@ -5,8 +5,6 @@ import (
 	"math"
 )
 
-
-
 type Shape interface {
 	getArea() float32
 	getPerimeter() float32
@@ -80,8 +78,7 @@ func (r *RedColour) printColour() {
 	fmt.Println("I'm Red!")
 }
 
-type BlueColour struct {
-}
+type BlueColour struct{}
 
 func (b *BlueColour) printColour() {
 	fmt.Println("I'm Blue!")
@@ -111,5 +108,5 @@ func main() {
 	c.getColour()
 }
 
-
-
+//It decouples abstraction (an object) from its implementation (the thing that the object does).
+// This way, we can change what an object does as much as we want.
